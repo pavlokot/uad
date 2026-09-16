@@ -212,6 +212,7 @@
       {
         title: "Видатки: будівельні роботи",
         sub: "Кошторис і фактичне фінансування · суми у гривнях",
+        unit: "позицій кошторису",
         cols: ["№", "Найменування робіт", "Виконавець", "План видатки", "Факт видатки"],
         rows: [
           [1, "Благоустрій", "«Дерхоф» ТОВ", "950 000,00", "—"],
@@ -234,6 +235,7 @@
       {
         title: "Видатки: проєктування",
         sub: "Проєктні роботи та приєднання до електромереж · суми у гривнях",
+        unit: "позицій кошторису",
         cols: ["№", "Найменування робіт", "Виконавець / сторона", "План видатки", "Факт видатки"],
         rows: [
           ["1", "Збір та аналіз вихідних даних", "«ОСНОВА-СОЛСИФ» ТОВ", "26 700,00", "26 700,00"],
@@ -299,13 +301,14 @@
     var totalsList = t.total ? [t.total] : (t.totals || []);
     var totals = totalsList.map(function (row) {
       var tds = row.map(function (cell, ci) {
-        var isNum = ci >= row.length - 2 && cell !== "";
+        var isNum = (ci === 3 || ci === 4) && cell !== "";
         return "<td" + (isNum ? ' class="num"' : "") + ">" + esc(cell) + "</td>";
       }).join("");
       return '<tr class="total">' + tds + "</tr>";
     }).join("");
+    var unit = t.unit || "учасників";
     var toggleBtn = t.rows.length > previewN
-      ? '<button class="uad-memorial__toggle" type="button" data-toggle="' + idx + '" data-n="' + t.rows.length + '">Показати всі ' + t.rows.length + " учасників</button>"
+      ? '<button class="uad-memorial__toggle" type="button" data-toggle="' + idx + '" data-n="' + t.rows.length + '">Показати всі ' + t.rows.length + " " + unit + "</button>"
       : "";
     return '<div class="uad-memorial__block">' +
       "<h4>" + esc(t.title) + "</h4>" +
