@@ -2,7 +2,7 @@
     Вставка (елемент HTML Embed, на вкладку "Фінансові показники"):
       <div data-uad-finance></div>
       <script src="https://cdn.jsdelivr.net/gh/pavlokot/uad@fin-v1/uaofd-finance.js" defer></script>
-    - data-bg : необов'язково, колір фону під блоком. За замовчуванням #f5f5f5.
+    - data-bg : необов'язково, колір фону під блоком. За замовчуванням #F9F7F5.
     Дані статичні (знімок з PDF) — редагуються нижче в об'єкті DATA.
     Стилі ізольовані (Shadow DOM), без зовнішніх залежностей. */
 (function () {
@@ -11,47 +11,47 @@
   var CSS = ":host{display:block}\n" +
     ".uad-finance, .uad-finance * { box-sizing: border-box; }\n" +
     ".uad-finance {\n" +
-    "  --f-violet: #8040b0; --f-violet-soft: #ede0f8;\n" +
-    "  --f-navy: #1b2a4a; --f-rust: #c34c2c; --f-rust-soft: #fbe4dc;\n" +
-    "  --f-done: #78a748; --f-accent: #e6f44f;\n" +
+    "  --f-violet: #85529C; --f-violet-soft: #EFE4F3;\n" +
+    "  --f-navy: #1B3155; --f-rust: #D3411C; --f-rust-soft: #FBE1D8;\n" +
+    "  --f-done: #3E9536; --f-accent: #D1CE05;\n" +
     "  --f-ink: #242424; --f-ink-soft: #4b4b4b; --f-muted: #6e6e6e;\n" +
     "  --f-line: rgba(0,0,0,0.1); --f-panel: #ffffff;\n" +
-    "  --f-page-bg: #f5f5f5;\n" +
-    "  --f-c1: #1b2a4a; --f-c2: #1f8a6f; --f-c3: #7c93ad; --f-c4: #d29a3d; --f-c5: #a98fc0; --f-c6: #d8d8dc;\n" +
+    "  --f-page-bg: #F9F7F5;\n" +
+    "  --f-c1: #1B3155; --f-c2: #3E9536; --f-c3: #85529C; --f-c4: #D1CE05; --f-c5: #D3411C; --f-c6: #F3E7DF;\n" +
     "  color-scheme: light; display: block; width: 100%; padding: 0; position: relative;\n" +
     "  background: var(--f-page-bg); color: var(--f-ink);\n" +
-    "  font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased;\n" +
+    "  font-family: 'Mark Simonson Proxima Nova', Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased;\n" +
     "}\n" +
     ".uad-finance__shell { padding: 32px 40px 40px; }\n" +
-    ".uad-finance__eyebrow { margin: 0 0 12px; font-family: Manrope, Arial, sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--f-violet); }\n" +
-    ".uad-finance__title { margin: 0 0 10px; font-family: Manrope, Arial, sans-serif; font-size: 30px; line-height: 1.16; font-weight: 900; letter-spacing: -0.02em; max-width: 34ch; color: var(--f-muted); }\n" +
+    ".uad-finance__eyebrow { margin: 0 0 12px; font-family: 'Mark Simonson Proxima Nova', Arial, sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--f-violet); }\n" +
+    ".uad-finance__title { margin: 0 0 10px; font-family: 'Mark Simonson Proxima Nova', Arial, sans-serif; font-size: 30px; line-height: 1.16; font-weight: 900; letter-spacing: -0.02em; max-width: 34ch; color: var(--f-muted); }\n" +
     ".uad-finance__lede { margin: 0 0 26px; max-width: 68ch; font-size: 14px; line-height: 1.55; color: var(--f-ink-soft); font-weight: 500; }\n" +
     ".uad-finance__tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }\n" +
     ".uad-finance__tile { padding: 16px 18px; border-radius: 12px; background: var(--f-panel); border: 1px solid var(--f-line); }\n" +
-    ".uad-finance__tile b { display: block; font-family: Manrope, Arial, sans-serif; font-size: 26px; font-weight: 900; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; color: var(--f-ink); }\n" +
+    ".uad-finance__tile b { display: block; font-family: 'Mark Simonson Proxima Nova', Arial, sans-serif; font-size: 26px; font-weight: 900; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; color: var(--f-ink); }\n" +
     ".uad-finance__tile--done b { color: var(--f-done); } .uad-finance__tile--rust b { color: var(--f-rust); }\n" +
     ".uad-finance__tile span { display: block; margin-top: 6px; font-size: 12.5px; font-weight: 700; color: var(--f-ink-soft); }\n" +
     ".uad-finance__tile em { display: block; margin-top: 2px; font-style: normal; font-size: 11px; font-weight: 500; color: var(--f-muted); }\n" +
     ".uad-finance__cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: stretch; }\n" +
     ".uad-finance__card { padding: 22px 24px; border-radius: 12px; background: var(--f-panel); border: 1px solid var(--f-line); }\n" +
-    ".uad-finance__card h3 { margin: 0 0 4px; font-family: Manrope, Arial, sans-serif; font-size: 16px; font-weight: 800; letter-spacing: -0.01em; color: var(--f-ink); }\n" +
+    ".uad-finance__card h3 { margin: 0 0 4px; font-family: 'Mark Simonson Proxima Nova', Arial, sans-serif; font-size: 16px; font-weight: 800; letter-spacing: -0.01em; color: var(--f-ink); }\n" +
     ".uad-finance__card .uad-finance__sub { margin: 0 0 16px; font-size: 12px; font-weight: 600; color: var(--f-muted); }\n" +
-    ".uad-finance__big { font-family: Manrope, Arial, sans-serif; font-size: 34px; font-weight: 900; letter-spacing: -0.02em; color: var(--f-rust); margin-bottom: 14px; font-variant-numeric: tabular-nums; }\n" +
+    ".uad-finance__big { font-family: 'Mark Simonson Proxima Nova', Arial, sans-serif; font-size: 34px; font-weight: 900; letter-spacing: -0.02em; color: var(--f-rust); margin-bottom: 14px; font-variant-numeric: tabular-nums; }\n" +
     ".uad-finance__debtors { list-style: none; margin: 0 0 16px; padding: 0; display: grid; gap: 8px; }\n" +
     ".uad-finance__debtors li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; border-radius: 8px; background: var(--f-page-bg); font-size: 13.5px; font-weight: 700; color: var(--f-ink); }\n" +
-    ".uad-finance__debtors li b { font-family: Manrope, Arial, sans-serif; font-variant-numeric: tabular-nums; color: var(--f-rust); }\n" +
+    ".uad-finance__debtors li b { font-family: 'Mark Simonson Proxima Nova', Arial, sans-serif; font-variant-numeric: tabular-nums; color: var(--f-rust); }\n" +
     ".uad-finance__callout { padding: 10px 14px; border-radius: 8px; background: var(--f-rust-soft); color: var(--f-navy); font-size: 13px; font-weight: 700; margin-bottom: 10px; }\n" +
     ".uad-finance__footnote { margin: 0; font-size: 12px; font-weight: 500; color: var(--f-muted); }\n" +
     ".uad-finance__donut-wrap { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }\n" +
     ".uad-finance__donut { width: 148px; height: 148px; border-radius: 50%; position: relative; flex: 0 0 auto; }\n" +
     ".uad-finance__donut::after { content: \"\"; position: absolute; inset: 24%; border-radius: 50%; background: var(--f-panel); display: flex; }\n" +
     ".uad-finance__donut-total { position: absolute; inset: 24%; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }\n" +
-    ".uad-finance__donut-total b { font-family: Manrope, Arial, sans-serif; font-size: 17px; font-weight: 900; color: var(--f-ink); line-height: 1.1; }\n" +
+    ".uad-finance__donut-total b { font-family: 'Mark Simonson Proxima Nova', Arial, sans-serif; font-size: 17px; font-weight: 900; color: var(--f-ink); line-height: 1.1; }\n" +
     ".uad-finance__donut-total span { font-size: 9.5px; font-weight: 700; color: var(--f-muted); text-transform: uppercase; letter-spacing: 0.04em; }\n" +
     ".uad-finance__legend { flex: 1 1 220px; list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; min-width: 200px; }\n" +
     ".uad-finance__legend li { display: flex; align-items: center; gap: 9px; font-size: 12.5px; font-weight: 600; color: var(--f-ink-soft); }\n" +
     ".uad-finance__legend i { width: 11px; height: 11px; border-radius: 3px; flex: 0 0 auto; }\n" +
-    ".uad-finance__legend b { margin-left: auto; font-family: Manrope, Arial, sans-serif; font-variant-numeric: tabular-nums; color: var(--f-ink); font-weight: 800; }\n" +
+    ".uad-finance__legend b { margin-left: auto; font-family: 'Mark Simonson Proxima Nova', Arial, sans-serif; font-variant-numeric: tabular-nums; color: var(--f-ink); font-weight: 800; }\n" +
     "@media screen and (max-width: 980px) {\n" +
     "  .uad-finance__shell { padding: 28px 24px 36px; }\n" +
     "  .uad-finance__tiles { grid-template-columns: repeat(2, 1fr); }\n" +
@@ -128,15 +128,8 @@
 
   function esc(v) { return String(v == null ? "" : v).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
 
-  function ensureFont() {
-    if (document.getElementById("uad-finance-font") || document.__uadFinanceFont) return;
-    document.__uadFinanceFont = true;
-    var link = document.createElement("link");
-    link.id = "uad-finance-font";
-    link.rel = "stylesheet";
-    link.href = "https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800;900&display=swap";
-    (document.head || document.documentElement).appendChild(link);
-  }
+  /* Шрифт Proxima Nova не завантажуємо самі (платний) — сайт уже реєструє
+     "Mark Simonson Proxima Nova" глобально, Shadow DOM це успадковує. */
 
   function render(root) {
     function q(sel) { return root.querySelector(sel); }
@@ -177,7 +170,6 @@
   function mount(host) {
     if (host.__uadFinance) return;
     host.__uadFinance = true;
-    ensureFont();
     var sr = host.attachShadow ? host.attachShadow({ mode: "open" }) : host;
     sr.innerHTML = "<style>" + CSS + "</style><div class=\"uad-finance\" data-uad-finance>" + INNER + "</div>";
     var root = sr.querySelector(".uad-finance");
