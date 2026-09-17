@@ -15,8 +15,8 @@
   var CSS = ":host{display:block}\n" +
     ".uad-memorial, .uad-memorial * { box-sizing: border-box; }\n" +
     ".uad-memorial {\n" +
-    "  --m-violet: #8040b0; --m-navy: #1b2a4a; --m-rust: #c0300c; --m-rust-soft: #fbe4dc;\n" +
-    "  --m-done: #157a3d; --m-accent: #e6f44f; --m-accent-soft: #fbfde0;\n" +
+    "  --m-violet: #8040b0; --m-navy: #1b2a4a; --m-rust: #c34c2c; --m-rust-soft: #fbe4dc;\n" +
+    "  --m-done: #78a748; --m-accent: #e6f44f; --m-accent-soft: #fbfde0;\n" +
     "  --m-ink: #242424; --m-ink-soft: #4b4b4b; --m-muted: #6e6e6e;\n" +
     "  --m-line: rgba(0,0,0,0.1); --m-panel: #ffffff; --m-page-bg: #f5f5f5;\n" +
     "  color-scheme: light; display: block; width: 100%; padding: 0; position: relative;\n" +

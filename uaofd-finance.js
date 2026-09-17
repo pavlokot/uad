@@ -12,8 +12,8 @@
     ".uad-finance, .uad-finance * { box-sizing: border-box; }\n" +
     ".uad-finance {\n" +
     "  --f-violet: #8040b0; --f-violet-soft: #ede0f8;\n" +
-    "  --f-navy: #1b2a4a; --f-rust: #c0300c; --f-rust-soft: #fbe4dc;\n" +
-    "  --f-done: #157a3d; --f-accent: #e6f44f;\n" +
+    "  --f-navy: #1b2a4a; --f-rust: #c34c2c; --f-rust-soft: #fbe4dc;\n" +
+    "  --f-done: #78a748; --f-accent: #e6f44f;\n" +
     "  --f-ink: #242424; --f-ink-soft: #4b4b4b; --f-muted: #6e6e6e;\n" +
     "  --f-line: rgba(0,0,0,0.1); --f-panel: #ffffff;\n" +
     "  --f-page-bg: #f5f5f5;\n" +
