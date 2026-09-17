@@ -2,7 +2,7 @@
     Вставка (елемент HTML Embed):
       <div data-uad-memorial></div>
       <script src="https://cdn.jsdelivr.net/gh/pavlokot/uad@mem-v1/uaofd-memorial.js" defer></script>
-    - data-bg : необов'язково, колір фону під блоком. За замовчуванням #F9F7F5.
+    - data-bg : необов'язково, колір фону під блоком. За замовчуванням #f5f5f5.
     Джерело: презентація для погодження + додаток «Звіт про виконання бюджету
     цільового фонду» (без листа Музею — за проханням). Дані статичні, редагуються
     в об'єкті DATA нижче. Зображення — з репозиторію pavlokot/uad (папка memorial-imgs).
@@ -18,45 +18,45 @@
     "  --m-violet: #85529C; --m-navy: #1B3155; --m-rust: #D3411C; --m-rust-soft: #FBE1D8;\n" +
     "  --m-done: #3E9536; --m-accent: #D1CE05; --m-accent-soft: #FAF8D9;\n" +
     "  --m-ink: #242424; --m-ink-soft: #4b4b4b; --m-muted: #6e6e6e;\n" +
-    "  --m-line: rgba(0,0,0,0.1); --m-panel: #ffffff; --m-page-bg: #F9F7F5;\n" +
+    "  --m-line: rgba(0,0,0,0.1); --m-panel: #ffffff; --m-page-bg: #f5f5f5;\n" +
     "  color-scheme: light; display: block; width: 100%; padding: 0; position: relative;\n" +
     "  background: var(--m-page-bg); color: var(--m-ink);\n" +
-    "  font-family: 'Mark Simonson Proxima Nova', Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased;\n" +
+    "  font-family: Arial, Helvetica, sans-serif; -webkit-font-smoothing: antialiased;\n" +
     "}\n" +
     ".uad-memorial__shell { padding: 32px 40px 48px; }\n" +
-    ".uad-memorial__eyebrow { margin: 0 0 12px; font-family: 'Mark Simonson Proxima Nova', Arial, sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--m-violet); }\n" +
-    ".uad-memorial__title { margin: 0 0 12px; font-family: 'Mark Simonson Proxima Nova', Arial, sans-serif; font-size: 30px; line-height: 1.16; font-weight: 900; letter-spacing: -0.02em; max-width: 34ch; color: var(--m-muted); }\n" +
+    ".uad-memorial__eyebrow { margin: 0 0 12px; font-family: Arial, sans-serif; font-size: 11px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--m-violet); }\n" +
+    ".uad-memorial__title { margin: 0 0 12px; font-family: Arial, sans-serif; font-size: 30px; line-height: 1.16; font-weight: 900; letter-spacing: -0.02em; max-width: 34ch; color: var(--m-muted); }\n" +
     ".uad-memorial__lede { margin: 0 0 22px; max-width: 78ch; font-size: 14px; line-height: 1.6; color: var(--m-ink-soft); font-weight: 500; }\n" +
     ".uad-memorial__section { margin-top: 34px; }\n" +
-    ".uad-memorial__section h3 { margin: 0 0 8px; font-family: 'Mark Simonson Proxima Nova', Arial, sans-serif; font-size: 19px; font-weight: 800; letter-spacing: -0.01em; color: var(--m-ink); }\n" +
+    ".uad-memorial__section h3 { margin: 0 0 8px; font-family: Arial, sans-serif; font-size: 19px; font-weight: 800; letter-spacing: -0.01em; color: var(--m-ink); }\n" +
     ".uad-memorial__section > p { margin: 0 0 16px; max-width: 78ch; font-size: 13.5px; line-height: 1.6; color: var(--m-ink-soft); }\n" +
     ".uad-memorial__gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 8px; }\n" +
     ".uad-memorial__gallery img { display: block; width: 100%; height: 170px; object-fit: cover; border-radius: 10px; border: 1px solid var(--m-line); }\n" +
     ".uad-memorial__caption { margin: 0 0 4px; font-size: 11.5px; color: var(--m-muted); font-weight: 600; }\n" +
     ".uad-memorial__budget { display: grid; grid-template-columns: 1.3fr 1fr; gap: 16px; align-items: stretch; }\n" +
     ".uad-memorial__card { padding: 22px 24px; border-radius: 12px; background: var(--m-panel); border: 1px solid var(--m-line); }\n" +
-    ".uad-memorial__big { font-family: 'Mark Simonson Proxima Nova', Arial, sans-serif; font-size: 32px; font-weight: 900; letter-spacing: -0.02em; color: var(--m-ink); margin: 0 0 4px; font-variant-numeric: tabular-nums; }\n" +
+    ".uad-memorial__big { font-family: Arial, sans-serif; font-size: 32px; font-weight: 900; letter-spacing: -0.02em; color: var(--m-ink); margin: 0 0 4px; font-variant-numeric: tabular-nums; }\n" +
     ".uad-memorial__card .uad-memorial__sub { margin: 0 0 14px; font-size: 12px; font-weight: 600; color: var(--m-muted); }\n" +
     ".uad-memorial__lines { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }\n" +
     ".uad-memorial__lines li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 12px; border-radius: 8px; background: var(--m-page-bg); font-size: 13px; font-weight: 600; color: var(--m-ink); }\n" +
-    ".uad-memorial__lines li b { font-family: 'Mark Simonson Proxima Nova', Arial, sans-serif; font-variant-numeric: tabular-nums; }\n" +
+    ".uad-memorial__lines li b { font-family: Arial, sans-serif; font-variant-numeric: tabular-nums; }\n" +
     ".uad-memorial__ask { padding: 22px 24px; border-radius: 12px; background: var(--m-accent-soft); border: 1px solid rgba(209,206,5,0.55); }\n" +
     ".uad-memorial__ask h3 { color: var(--m-navy); }\n" +
     ".uad-memorial__ask-nums { display: flex; gap: 22px; flex-wrap: wrap; margin: 6px 0 14px; }\n" +
-    ".uad-memorial__ask-nums div b { display: block; font-family: 'Mark Simonson Proxima Nova', Arial, sans-serif; font-size: 24px; font-weight: 900; color: var(--m-navy); font-variant-numeric: tabular-nums; }\n" +
+    ".uad-memorial__ask-nums div b { display: block; font-family: Arial, sans-serif; font-size: 24px; font-weight: 900; color: var(--m-navy); font-variant-numeric: tabular-nums; }\n" +
     ".uad-memorial__ask-nums div span { font-size: 12px; font-weight: 700; color: var(--m-ink-soft); }\n" +
     ".uad-memorial__ask p { margin: 0; font-size: 13px; line-height: 1.55; color: var(--m-ink-soft); max-width: 70ch; }\n" +
     ".uad-memorial__plaque { margin: 6px auto 0; max-width: 480px; padding: 30px 26px; border-radius: 10px; background: var(--m-navy); color: #f4f2ec; text-align: center; }\n" +
-    ".uad-memorial__plaque .l1 { font-family: 'Mark Simonson Proxima Nova', Arial, sans-serif; font-size: 13px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px; }\n" +
+    ".uad-memorial__plaque .l1 { font-family: Arial, sans-serif; font-size: 13px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 14px; }\n" +
     ".uad-memorial__plaque .l2 { font-size: 12.5px; line-height: 1.7; opacity: 0.9; margin-bottom: 10px; }\n" +
-    ".uad-memorial__plaque .l3 { font-family: 'Mark Simonson Proxima Nova', Arial, sans-serif; font-size: 13px; font-weight: 700; line-height: 1.9; letter-spacing: 0.02em; margin-bottom: 14px; }\n" +
+    ".uad-memorial__plaque .l3 { font-family: Arial, sans-serif; font-size: 13px; font-weight: 700; line-height: 1.9; letter-spacing: 0.02em; margin-bottom: 14px; }\n" +
     ".uad-memorial__plaque .l4 { font-size: 12px; line-height: 1.6; opacity: 0.85; max-width: 380px; margin: 0 auto 10px; }\n" +
     ".uad-memorial__plaque .l5 { font-size: 11.5px; opacity: 0.7; letter-spacing: 0.04em; }\n" +
     ".uad-memorial__report-head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 4px; }\n" +
     ".uad-memorial__report-head .uad-memorial__sub { margin: 0 0 18px; }\n" +
     ".uad-memorial__tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 20px; }\n" +
     ".uad-memorial__tile { padding: 14px 16px; border-radius: 12px; background: var(--m-panel); border: 1px solid var(--m-line); }\n" +
-    ".uad-memorial__tile b { display: block; font-family: 'Mark Simonson Proxima Nova', Arial, sans-serif; font-size: 22px; font-weight: 900; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; color: var(--m-ink); }\n" +
+    ".uad-memorial__tile b { display: block; font-family: Arial, sans-serif; font-size: 22px; font-weight: 900; letter-spacing: -0.01em; font-variant-numeric: tabular-nums; color: var(--m-ink); }\n" +
     ".uad-memorial__tile span { display: block; margin-top: 4px; font-size: 11px; font-weight: 700; color: var(--m-muted); text-transform: uppercase; letter-spacing: 0.03em; }\n" +
     ".uad-memorial__progress-row { display: grid; grid-template-columns: 140px 1fr 170px; align-items: center; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--m-line); font-size: 13px; }\n" +
     ".uad-memorial__progress-row:last-child { border-bottom: 0; }\n" +
@@ -68,7 +68,7 @@
     ".uad-memorial__progress-nums em.short { color: var(--m-rust); } .uad-memorial__progress-nums em.over { color: var(--m-done); }\n" +
     ".uad-memorial__tbl-wrap { overflow-x: auto; border: 1px solid var(--m-line); border-radius: 10px; margin-top: 8px; }\n" +
     "table.uad-memorial__tbl { width: 100%; border-collapse: collapse; font-size: 12.5px; min-width: 560px; }\n" +
-    ".uad-memorial__tbl th { text-align: left; padding: 10px 12px; background: var(--m-navy); color: #fff; font-family: 'Mark Simonson Proxima Nova', Arial, sans-serif; font-size: 10.5px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; }\n" +
+    ".uad-memorial__tbl th { text-align: left; padding: 10px 12px; background: var(--m-navy); color: #fff; font-family: Arial, sans-serif; font-size: 10.5px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; }\n" +
     ".uad-memorial__tbl td { padding: 9px 12px; border-bottom: 1px solid var(--m-line); color: var(--m-ink-soft); }\n" +
     ".uad-memorial__tbl tr:last-child td { border-bottom: 0; }\n" +
     ".uad-memorial__tbl td.num { text-align: right; font-variant-numeric: tabular-nums; color: var(--m-ink); font-weight: 600; }\n" +
@@ -78,7 +78,7 @@
     ".uad-memorial__toggle:hover { background: var(--m-page-bg); }\n" +
     ".uad-memorial__hidden-row { display: none; }\n" +
     ".uad-memorial__block { margin-top: 26px; }\n" +
-    ".uad-memorial__block h4 { margin: 0 0 4px; font-family: 'Mark Simonson Proxima Nova', Arial, sans-serif; font-size: 14px; font-weight: 800; color: var(--m-ink); }\n" +
+    ".uad-memorial__block h4 { margin: 0 0 4px; font-family: Arial, sans-serif; font-size: 14px; font-weight: 800; color: var(--m-ink); }\n" +
     ".uad-memorial__block .uad-memorial__sub { margin: 0 0 4px; }\n" +
     "@media screen and (max-width: 980px) {\n" +
     "  .uad-memorial__shell { padding: 28px 24px 40px; }\n" +
@@ -265,9 +265,6 @@
   };
 
   function esc(v) { return String(v == null ? "" : v).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
-
-  /* Шрифт Proxima Nova не завантажуємо самі (платний) — сайт уже реєструє
-     "Mark Simonson Proxima Nova" глобально, Shadow DOM це успадковує. */
 
   function statusCls(s) { return /сплачено/i.test(s) ? "st-paid" : "st-wait"; }
 
